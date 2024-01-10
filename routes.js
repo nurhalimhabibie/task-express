@@ -2,10 +2,12 @@ const router = require("express").Router();
 const path = require("path");
 
 router.get("/", (req, res) => {
-  res.json({
-    status: "Succesfull",
-    message: "Welcome to Express JS",
-  });
+  // res.json({
+  //   status: "Succesfull",
+  //   message: "Welcome to Express JS",
+  // });
+  // res.sendFile("./views/index.html", { root: __dirname });
+  res.sendFile(path.join(__dirname + "/views/index.html"));
 });
 
 router.get("/about", (req, res) => {
